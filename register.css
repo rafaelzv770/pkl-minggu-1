@@ -75,6 +75,17 @@ body {
     background: #005bb5;
 }
 
+.login-link {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.login-link a {
+    color: #047dff;
+    text-decoration: none;
+}
+
 @media (max-width: 480px) {
     .login-card { padding: 20px; }
 }

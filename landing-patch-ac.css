@@ -1,19 +1,98 @@
-/* Global reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Base typography and layout */
 body {
     font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #000000;
+    min-height: 100vh;
+    position: relative;
+    overflow-y: auto;
     background-color: #ffffff;
-    color: #333333;
-    height: 100vh;
 }
 
-/* Containers */
+body::before {
+    content: "";
+    position: absolute;
+    top: -80px;
+    left: -80px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transform: rotate(30deg);
+}
+
+
+.header h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #047dff;
+    margin-bottom: 10px;
+}
+
+.filter-bar {
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px 0;
+    background: #ffffff;
+    border-radius: 8px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.filter-button.active {
+    background-color: #005bb5;
+}
+
+.filter-button {
+    padding: 8px 12px;
+    margin: 0 5px;
+    background-color: #047dff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-button:hover {
+    background-color: #005bb5;
+}
+
+.rating {
+    margin-top: 6px;
+    font-size: 0.9rem;
+    color: #555;
+    text-align: center;
+    align-self: center;
+    margin-top: auto;
+}
+
+.rating .stars {
+    color: gold;
+    margin-right: 4px;
+}
+
+.product-item h3 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.product-item p {
+    font-size: 0.95rem;
+    color: #333;
+    margin: 0;
+}
+
+.product-item .price {
+    font-weight: bold;
+    margin: 0;
+}
+
 .container {
     width: 80%;
     margin: 0 auto;
@@ -25,7 +104,7 @@ body {
     margin-top: 60px;
 }
 
-/* Product listing */
+
 .product-list {
     display: flex;
     flex-wrap: wrap;
@@ -37,9 +116,11 @@ body {
     width: 100%;
     height: 150px;
     border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 10px;
 }
 
-/* Individual product cards */
+.product-item,
 .keyboard,
 .mouse,
 .mousepad,
@@ -48,19 +129,29 @@ body {
 .speaker,
 .pc,
 .flashdisk {
-    border: 1px solid #ddd;
+    background: #ffffff;
+    border: 1px solid #dddddd;
     border-radius: 8px;
     padding: 15px;
     width: calc(25% - 20px);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px; /* uniform spacing between children */
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Buttons */
+.product-item:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
 .button-masuk {
     position: absolute;
     top: 20px;
-    right: 20px;
+    right: 60px;
     padding: 10px 15px;
     background-color: #047dff;
     color: #fff;
@@ -68,23 +159,25 @@ body {
     border-radius: 4px;
     cursor: pointer;
 }
-
 .button {
     display: inline-block;
     padding: 10px 20px;
-    margin-top: 15px;
+    margin-top: auto;
     background-color: #047dff;
     color: #fff;
     text-decoration: none;
     border-radius: 4px;
     text-align: center;
     cursor: pointer;
+    align-self: center;
 }
 
-/* About section */
 .tentang-kami {
-    margin-top: 40px;
+    margin: 40px auto;
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 8px;
+    max-width: 800px;
+    text-align: center;
+    line-height: 1.5;
 }
