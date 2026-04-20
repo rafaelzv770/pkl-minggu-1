@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="login1.css">
-    </head>
+</head>
+
 <body>
     <div class="login-container">
         <form class="login-card" action="#" method="post">
@@ -24,7 +26,7 @@
     </div>
 
     <script>
-        document.querySelector('.login-card').addEventListener('submit', function(e) {
+        document.querySelector('.login-card').addEventListener('submit', function (e) {
             e.preventDefault();
             const user = document.getElementById('username').value;
             const pass = document.getElementById('password').value;
@@ -41,6 +43,7 @@
                 alert('Username atau password salah, atau Anda belum terdaftar.');
             }
         });
-    </script> 
+    </script>
 </body>
+
 </html>

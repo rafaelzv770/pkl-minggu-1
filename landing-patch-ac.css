@@ -125,7 +125,7 @@ body::before {
 .mouse,
 .mousepad,
 .headset,
-.mic, 
+.mic,
 .speaker,
 .pc,
 .flashdisk {
@@ -139,7 +139,7 @@ body::before {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 8px; /* uniform spacing between children */
+    gap: 8px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -159,6 +159,22 @@ body::before {
     border-radius: 4px;
     cursor: pointer;
 }
+
+.button-keranjang {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    background-color: #047dff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
 .button {
     display: inline-block;
     padding: 10px 20px;

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="register.css">
 </head>
+
 <body>
     <div class="login-container">
         <form class="login-card" action="#" method="post">
@@ -24,7 +26,8 @@
             </div>
             <div class="field">
                 <label for="confirm-password">Konfirmasi Password</label>
-                <input type="password" id="confirm-password" name="confirm-password" required placeholder="Ulangi password">
+                <input type="password" id="confirm-password" name="confirm-password" required
+                    placeholder="Ulangi password">
             </div>
             <button type="submit" class="btn">Daftar</button>
             <p class="login-link">Sudah punya akun? <a href="login.html">Masuk</a></p>
@@ -32,7 +35,7 @@
     </div>
 
     <script>
-        document.querySelector('.login-card').addEventListener('submit', function(e) {
+        document.querySelector('.login-card').addEventListener('submit', function (e) {
             e.preventDefault();
             const user = document.getElementById('username').value;
             const email = document.getElementById('email').value;
@@ -55,4 +58,5 @@
         });
     </script>
 </body>
+
 </html>
